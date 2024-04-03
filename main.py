@@ -1,4 +1,4 @@
-def gcd(a, b):
+def solicitar_numero(a: int, b: int) -> int:
     """
     Calcula el máximo común divisor (MCD) de dos números enteros utilizando el algoritmo de Euclides.
 
@@ -27,15 +27,18 @@ def gcd(a, b):
     return abs(a)
 
 
-# Ejemplo de uso
-try:
-    num1 = int(input("Ingrese el primer número entero: "))
-    num2 = int(input("Ingrese el segundo número entero: "))
-    resultado = gcd(num1, num2)
-    print("El máximo común divisor de", num1, "y", num2, "es:", resultado)
-except ValueError as ve:
-    print("Error:", ve)
-except ZeroDivisionError as zde:
-    print("Error:", zde)
-except Exception as e:
-    print("Ocurrió un error inesperado:", e)
+def main():
+    try:
+        num1 = int(input("Ingrese el primer número entero: "))
+        num2 = int(input("Ingrese el segundo número entero: "))
+        resultado = solicitar_numero(num1, num2)
+        print("El máximo común divisor de", num1, "y", num2, "es:", resultado)
+    except ValueError as ve:
+        print("Error:", ve)
+    except ZeroDivisionError as zde:
+        print("Error:", zde)
+    except Exception as e:
+        print("Ocurrió un error inesperado:", e)
+
+if __name__ == "__main__":
+    main()
